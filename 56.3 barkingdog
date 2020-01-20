@@ -1,11 +1,28 @@
+1. answer
+public class BarkingDog {
+   public static boolean shouldWakeUp(boolean barking, int hourOfDay)
+        {
+            if (barking==true&hourOfDay<8&hourOfDay>=0 ){
+                return true;
+            }else if (barking==true&hourOfDay>22&hourOfDay<=23){
+                return true;
+            }else {
+                return false;
+            }
+        }
+    
+    
+}
+------------------------------
+2/testing:
 package com.company;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        boolean barking = true;
-        int hourOfDay = 24;
+        boolean barking = false;
+        int hourOfDay = -3;
         BarkingDog.shouldWakeUp(barking,hourOfDay);
     }
 
@@ -15,14 +32,16 @@ public class Main {
 
 
 
-        public static boolean shouldWakeUp(boolean barking, int hourOfDay)
+        public static void  shouldWakeUp(boolean barking, int hourOfDay)
         {
-            if (barking = true & hourOfDay < 0 ){
-                return true;
-            }else if (barking = true & hourOfDay>23){
-                return true;
+            if (barking == true & hourOfDay < 0 ){
+                System.out.println(true);
+            }else if (barking == true & hourOfDay>23){
+                System.out.println(true);
+            }else if (barking == false & hourOfDay>23){
+                System.out.println(false);
             }else{
-                return false;
+                System.out.println(false);
             }
         }
 
